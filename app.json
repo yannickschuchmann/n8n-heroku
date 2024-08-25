@@ -7,7 +7,7 @@
       "automation"
     ],
     "website": "https://n8n.io",
-    "repository": "https://github.com/n8n-io/n8n-heroku",
+    "repository": "https://github.com/yannickschuchmann/n8n-heroku",
     "logo": "https://raw.githubusercontent.com/n8n-io/n8n-heroku/main/n8n_logo.png",
     "success_url": "/",
     "stack": "container",
@@ -24,18 +24,16 @@
         "description": "Replace <appname> with your Heroku application name. This will ensure the correct webhook URLs are being shown in n8n.",
         "value": "https://<appname>.herokuapp.com"
       },
+      "DATABASE_URL": {
+        "description": "Provide a postgres connection url",
+        "value": "https://<appname>.herokuapp.com"
+      },
       "DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED": {
         "description": "SSL is required to connect to Postgres on Heroku",
         "value": false
       }
     },
     "addons": [
-      {
-        "plan": "heroku-postgresql",
-        "options": {
-          "version": "14"
-        }
-      },
       {
         "plan": "papertrail:choklad"
       }
